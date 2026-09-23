@@ -28,7 +28,7 @@ Bella Vista Italian Kitchen is a modern, premium, fully responsive React applica
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Start the develoment server:
    ```bash
    npm run dev
    ```
