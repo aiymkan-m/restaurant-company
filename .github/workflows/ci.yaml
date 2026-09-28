@@ -204,7 +204,7 @@ jobs:
         run: |
           docker tag \
             restaurant-company:${{ github.sha }} \
-            388260576770.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:${{ github.sha }}
+            388260576770.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:${{ github.sha }}
 
       # ------------------------------------------
       # Push SHA-tagged Image to ECR
@@ -212,7 +212,7 @@ jobs:
       - name: Push Docker image to ECR
         run: |
           docker push \
-            388260576770.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:${{ github.sha }}
+            388260576770.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:${{ github.sha }}
 
       # ------------------------------------------
       # Also create latest tag
@@ -221,9 +221,9 @@ jobs:
         run: |
           docker tag \
             restaurant-company:${{ github.sha }} \
-            388260576770.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:latest
+            388260576770.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:latest
 
       - name: Push latest to ECR
         run: |
           docker push \
-            388260576770.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:latest
+            388260576770.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:latest
